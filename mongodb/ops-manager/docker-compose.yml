@@ -1,0 +1,22 @@
+version: '2'
+
+services:
+
+  mongo-ops-manager:
+    image: mabeulux88/mongo-ops-manager:1.0
+    hostname: "mongo-ops-manager"
+    container_name: "mongo-ops-manager"
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mongodb-for-ops-manager
+    environment:
+      - TERM=dumb
+
+  mongodb-for-ops-manager:
+    image: mongo:3.4.9
+    hostname: "mongodb-for-ops-manager"
+    container_name: "mongodb-for-ops-manager"
+    ports:
+      - "27017:27017"
+
