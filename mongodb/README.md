@@ -72,7 +72,7 @@ b64f82c55e6a        mabeulux88/ops-manager:1.0     "/entrypoint.sh"         Abou
 ```
  * On the Deployment view, click on the "Servers" tab. You should see your X agents.
 
-![Deployment - Servers](/screenshots/deployment-servers.png?raw=true "Deployment - Servers")
+![Deployment - Servers](/mongodb/screenshots/deployment-servers.png?raw=true "Deployment - Servers")
 
 ## Configure Backup
  * Click on "Backup" on the left side and "configure the backup module".
