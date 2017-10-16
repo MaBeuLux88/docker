@@ -81,7 +81,7 @@ b64f82c55e6a        mabeulux88/ops-manager:1.0     "/entrypoint.sh"         Abou
  * Configure a File System Store. Choose `/backup` again.
  * Now for the point in time recovery, Ops Manager needs another MongoDB Database to backup Oplogs.
  * In the folder 5-mongodb-backup you can run a new container "mongodb-backup" on port 29000 still in the `netmongo` Docker network.
- * <hostname>:<port> : mongodb-backup:29000
+ * \<hostname\>:\<port\> : mongodb-backup:29000
  * MongoDB Auth username : leave blank (If in production activate properly the --auth at least with a decent user!)
  * MongoDB Auth password : leave blank
  * Save.
@@ -98,5 +98,5 @@ b64f82c55e6a        mabeulux88/ops-manager:1.0     "/entrypoint.sh"         Abou
 * The deployment of an entire MongoDB Sharded Cluster works perfectly.
 
 # Connect to any mongodb node with mongo client throw Docker
-`docker run -it --rm --network netmongo mongo:3.4.9 mongo mongodb-backup:29000`
-`docker run -it --rm --network netmongo mongo:3.4.9 mongo agent-1:27000`
+```docker run -it --rm --network netmongo mongo:3.4.9 mongo mongodb-backup:29000```
+```docker run -it --rm --network netmongo mongo:3.4.9 mongo agent-1:27000```
