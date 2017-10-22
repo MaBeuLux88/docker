@@ -1,4 +1,4 @@
-FROM couchbase:4.6.0 
+FROM couchbase:4.6.3 
 
 RUN apt-get update && apt-get install -y curl && rm -rf /var/lib/apt/lists/*
 

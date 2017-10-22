@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-docker stop couchbaseTest
-docker rm -v couchbaseTest
+docker stop autoconfig-couchbase
+docker rm -v autoconfig-couchbase
 exit 0
