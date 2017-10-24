@@ -2,6 +2,7 @@
 if [ "$#" -ne 4 ]; then
     echo "Illegal number of parameters"
     echo "Usage : $0 quantityAgents mmsBaseUrl mmsGroupId mmsApiKey"
+    echo "mmsBaseUrl in this example = http://ops-manager:8080"
     exit 1
 fi
 
