@@ -54,7 +54,7 @@ The point of this folder is to be able to create an entire MongoDB Ops Manager c
  * First we need a some stuff : deb file, mmsGroupId and mmsApiKey
  * Click on "Manage Existing", then "Install Agent" -> Ubuntu (15.x, 16.x) - DEB.
  * Download the automation agent deb file
-   - with the Curl command but you need to replace the host "ops-manager" by "localhost" : curl -OL http://localhost:8080/download/agent/automation/mongodb-mms-automation-agent-manager_3.2.15.2257-1_amd64.ubuntu1604.deb 
+   - with the Curl command but you need to replace the host "ops-manager" by "localhost" (see download-deb.sh script).
    - or you can use the online version you can find here : https://docs.cloudmanager.mongodb.com/tutorial/install-automation-agent-with-deb-package/ (see download-deb.sh script).
  * Copy paste the mmsGroupId and the mmsApiKey you get - we will need that in a minute.
  * Come back on the main screen - Deployment.
@@ -92,11 +92,13 @@ b64f82c55e6a        mabeulux88/ops-manager:1.0     "/entrypoint.sh"         Abou
  * If you want to connect to it from your host, each agent exposes a different port pointing to the port 27017 inside the container. Make sure your `mongod` or `mongos` uses the port 27017 so you can point to it using the port mapped to the host.
 
 # Current Support
-* MongoDB 3.4.9
-* MongoDB Ops Manager 3.4.9
+* MongoDB 3.6.0
+* MongoDB Ops Manager 3.6.0
 * The configuration of the backup database and agent seems to work fine.
 * The deployment of an entire MongoDB Sharded Cluster works perfectly.
 
 # Connect to any mongodb node with mongo client throw Docker
 ```docker run -it --rm --network netmongo mongo:3.4.9 mongo mongodb-backup:29000```
+
 ```docker run -it --rm --network netmongo mongo:3.4.9 mongo agent-1:27000```
+
